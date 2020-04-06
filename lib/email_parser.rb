@@ -12,9 +12,7 @@ class EmailAddressParser
   def parse
     if @email.include?(",")
       parsedEmails = @email.split(",")
-      if parsedEmails.include?(" ")
-        parsedEmails = parsedEmails.split(" ")
-      end
+      parsedEmails[1][0].delete
     elsif @email.include?(" ")
     parsedEmails = @email.split(" ")
     end
