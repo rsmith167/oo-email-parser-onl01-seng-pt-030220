@@ -19,5 +19,5 @@ class EmailAddressParser
     parsedEmails
   end
   
-  build.pry
+  pry.Build
 end
