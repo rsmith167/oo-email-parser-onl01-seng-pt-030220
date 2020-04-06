@@ -16,8 +16,8 @@ class EmailAddressParser
       @email = @email.split(" ")
       
     elsif @email.include?(" ")
-    parsedEmails = @email.split(" ")
+    @email = @email.split(" ")
     end
-    parsedEmails
+    @email
   end
 end
