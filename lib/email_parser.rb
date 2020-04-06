@@ -10,7 +10,15 @@ class EmailAddressParser
     @email = email
   end
   def parse
-    
+    if @email.include?(",")
+      parsedEmails = @email.split(",")
+      if parsedEmails.include?(" ")
+        parsedEmails = parsedEmails.split(" ")
+      end
+    elsif !@email.include?(" ")
+    parsedEmails = @email.split(" ")
+    end
+    parsedEmails
   end
   
   
