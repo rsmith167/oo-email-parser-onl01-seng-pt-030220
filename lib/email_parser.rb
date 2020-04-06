@@ -18,6 +18,6 @@ class EmailAddressParser
     elsif @email.include?(" ")
     @email = @email.split(" ")
     end
-    @email
+    @email = @email.uniq
   end
 end
